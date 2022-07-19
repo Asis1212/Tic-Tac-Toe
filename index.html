@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tic-Tac-Toe Game</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="https://kit.fontawesome.com/d49d845718.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--select character and mode - beginning page-->
+       <div class="select-box">
+           <header>Tic Tac Toe</header>
+           <div class="content">
+               <div class="title">Select which you want to be :</div>
+               <div class="options">
+                   <button class="playerX btn">Player (X)</button>
+                   <button class="playerO btn">Player (O)</button>
+               </div>
+           </div>
+           <div class="mode">
+               <div class="title">Select mode :</div>
+               <div class="options">
+                   <button class="against-pc btn">vs PC</button>
+                   <button class="against-firend btn">vs Friend</button>
+               </div>
+           </div>
+       </div>
+
+
+        <!--board game-->
+        <div class="play-board hide">
+            <div class="history">
+                <div class="Xwins">
+                    <div class="icon">
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+                    <span class="amount"></span>
+                </div>
+                <div class="Owins">
+                    <div class="icon">
+                        <i class="fa-solid fa-o"></i>
+                    </div>
+                    <span class="amount"></span>
+                </div>
+                <div class="draws">
+                    <div class="icon">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <span class="amount"></span>
+                </div>
+            </div>
+
+            <div class="play-area">
+                <section>
+                        <span class="box1 box"></span>
+                        <span class="box2 box"></span>
+                        <span class="box3 box"></span>
+                </section>
+                <section>
+                        <span class="box4 box"></span>
+                        <span class="box5 box"></span>
+                        <span class="box6 box"></span>
+                </section> 
+                <section>
+                        <span class="box7 box"></span>
+                        <span class="box8 box"></span>
+                        <span class="box9 box"></span> 
+                </section>
+            </div>
+
+            <div class="details">
+                <div class="players">
+                    <span class="Xturn active"> X's Turn</span>
+                    <span class="Oturn"> O's Turn</span>
+                </div>
+            </div>
+
+            <div class="homeClass">
+                <button class="homeButton">Home</button>
+                <button class="resetButton">Reset-Stats</button>
+            </div>
+        </div>
+
+        <!--finishing page-->
+        <div class="announcement hide">
+            <header></header>
+            <div class="replay">
+                <button>Replay</button>
+            </div>
+        </div>
+
+        <script src="scripts/functions-index.js"></script>
+        <script src="scripts/index.js"></script>
+    </body>
+</html>

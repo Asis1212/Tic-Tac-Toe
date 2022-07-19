@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Poppins:ital,wght@1,200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+body {
+    background: #114357;  
+    background: linear-gradient(to right, #F29492, #114357);
+    min-height: 100vh;
+}
+
+.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -20%) scale(0.6);
+}
+
+.select-box {
+    background-color: #fff;
+    position: absolute;
+    top: 20%;
+    left:40%;
+    padding: 30px;
+    border-radius: 5px;
+    max-width: 330px;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.select-box header {
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(173, 170, 170);
+}
+
+.select-box .title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0px;
+}
+
+.select-box .options {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.select-box button.btn {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 8px 0px;
+    border: none;
+    outline: none;
+    background-color: rgb(143, 201, 240);
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transform: all 0.3s ease;
+}
+
+.select-box button:hover {
+    transform: scale(0.96);
+}
+
+.focus {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 8px 0px;
+    border: none;
+    background-color: #fff;
+    color: rgb(143, 201, 240);
+    outline: auto;
+    outline-color: rgb(143, 201, 240);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.select-box .playerX {
+    margin-right: 5px;
+}
+
+.select-box .against-pc {
+    margin-right: 5px;
+}
+
+.play-board {
+    background-color: #fff;
+    position: absolute;
+    top: 15%;
+    left:40%;
+    padding: 30px;
+    border-radius: 5px;
+    max-width: 330px;
+    width: 100%;
+}
+
+.play-board .history {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(173, 170, 170);
+}
+.play-board .icon {
+    font-size: 30px;
+    opacity: 30%;
+}
+
+.play-board .play-area {
+    margin: 30px 40px;
+}
+
+.play-board section {
+    display: flex;
+}
+
+.play-board section span {
+    display: block;
+    height: 80px;
+    width: 80px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 50px;
+    color: rgb(83, 81, 81);
+}
+
+.box1, .box4, .box7 {
+    border-right: 1px solid rgb(173, 170, 170);
+}
+.box3, .box6, .box9 {
+    border-left: 1px solid rgb(173, 170, 170);
+}
+.box1, .box2, .box3, .box4, .box5, .box6 {
+    border-bottom: 1px solid rgb(173, 170, 170);
+}
+
+.play-board .details {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px 0px;
+}
+
+.play-board .details span {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 0px 15px;
+}
+
+.play-board .homeClass {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+ 
+.play-board button {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 8px 0px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(143, 201, 240);
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transform: all 0.3s ease;
+}
+
+.play-board button:hover {
+    transform: scale(0.96);
+}
+
+.play-board .homeButton {
+    margin-right: 5px;
+}
+
+.active{
+    background-color: rgb(143, 201, 240);
+    color: #fff;
+    outline: auto;
+    outline-color: #fff;
+}
+
+.announcement {
+    background-color: #fff;
+    position: absolute;
+    top: 32%;
+    left:36%;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 550px;
+    width: 100%;
+}
+
+.announcement header {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.announcement .replay {
+    text-align: center;
+}
+
+.announcement button {
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #fff;
+    background-color: rgb(143, 201, 240);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.announcement button:hover {
+    transform: scale(0.90);
+}
+
+/* respone the app */
+
+/* @media (max-width: 3000px) {
+    .select-box {
+        top: 25%;
+        left: 43%;
+    }
+    .select-box header {
+        font-size: 35px;
+    }
+    .select-box .title {
+        font-size: 22px;
+    }
+    .select-box button.btn {
+        font-size: 20px;
+    }
+    .play-board {
+        top:20%;
+        left: 43%;
+    }
+    .announcement {
+        left: 40%;
+    }
+}
+
+@media (max-width: 2700px) {
+    .select-box {
+        left: 41%;
+    }
+    .play-board {
+        left: 41%;
+    }
+    .announcement {
+        left: 36%;
+    }
+}
+
+@media (min-device-width: 1000px) and (max-device-width: 1500px){
+    .select-box {
+        top: 25%;
+        left: 34%;
+    }
+    .select-box header {
+        font-size: 30px;
+    }
+    .select-box .title {
+        font-size: 22px;
+        margin: 20px 0px;
+    }
+    .select-box button.btn {
+        font-size: 20px;
+    }
+    .focus {
+        font-size: 20px;
+    }
+    .play-board {
+        top: 9%;
+        left: 26%;
+        max-width: 550px;
+    }
+    .play-board .icon {
+        font-size: 35px;
+    }
+    .play-board .amount {
+        font-size: 20px;
+    }
+    .play-board section span {
+        height: 100px;
+        width: 120px;
+    }
+    .play-board .play-area {
+        margin: 60px 90px;
+    }
+    .box1, .box4, .box7 {
+        border-right: 2px solid rgb(173, 170, 170);
+    }
+    .box3, .box6, .box9 {
+        border-left: 2px solid rgb(173, 170, 170);
+    }
+    .box1, .box2, .box3, .box4, .box5, .box6 {
+        border-bottom: 2px solid rgb(173, 170, 170);
+    }
+    .play-board .box {
+        font-size: 70px;
+        padding-top: 5px;
+    }    
+    .play-board .details span {
+        font-size: 25px;
+    }
+    .play-board button {
+        font-size: 20px;
+    }
+    .play-board .homeButton {
+        margin-right: 10px;
+    }
+    .announcement {
+        left: 18%;
+        max-width: 700px;
+    }
+    .announcement header {
+        font-size: 45px;
+    }
+    .announcement button {
+        font-size: 20px;
+    }
+}
+
+@media (min-device-width: 850px) and (max-device-width: 1000px){
+    .select-box {
+        top: 10%;
+        left: 30%;
+        max-width: 300px;
+        width: 100%;
+    }
+    .select-box header {
+        font-size: 50px;
+    }
+    .select-box .title {
+        font-size: 38px;
+        margin: 25px 0px;
+    }
+    .select-box button.btn {
+        font-size: 25px;
+    }
+    .focus {
+        font-size: 25px;
+    }
+    .play-board {
+        top: 6%;
+        left: 5%;
+        max-width: 800px;
+    }
+    .play-board .icon {
+        font-size: 40px;
+    }
+    .play-board .amount {
+        font-size: 20px;
+    }
+    .play-board section span {
+        height: 140px;
+        width: 150px;
+    }
+    .play-board .play-area {
+        margin: 40px 155px;
+    }
+    .box1, .box4, .box7 {
+        border-right: 2px solid rgb(173, 170, 170);
+    }
+    .box3, .box6, .box9 {
+        border-left: 2px solid rgb(173, 170, 170);
+    }
+    .box1, .box2, .box3, .box4, .box5, .box6 {
+        border-bottom: 2px solid rgb(173, 170, 170);
+    }
+    .play-board .box {
+        font-size: 100px;
+        padding-top: 5px;
+    }    
+    .play-board .details span {
+        font-size: 30px;
+    }
+    .play-board button {
+        font-size: 25px;
+    }
+    .play-board .homeButton {
+        margin-right: 10px;
+    }
+    .announcement {
+        left: 6%;
+        max-width: 820px;
+    }
+    .announcement header {
+        font-size: 55px;
+    }
+    .announcement button {
+        font-size: 35px;
+    }
+}
+
+@media (min-device-width: 700px) and (max-device-width: 850px){
+    .select-box {
+        top: 20%;
+        left: 5%;
+        max-width: 820px;
+    }
+    .select-box header {
+        font-size: 60px;
+    }
+    .select-box .title {
+        font-size: 45px;
+        margin: 40px 0px;
+    }
+    .select-box button.btn {
+        font-size: 35px;
+    }
+    .focus {
+        font-size: 35px;
+    }
+    .play-board {
+        top: 4%;
+        left: 5%;
+        max-width: 820px;
+    }
+    .play-board .icon {
+        font-size: 60px;
+    }
+    .play-board .amount {
+        font-size: 35px;
+    }
+    .play-board section span {
+        height: 160px;
+        width: 160px;
+    }
+    .play-board .play-area {
+        margin: 40px 145px;
+    }
+    .box1, .box4, .box7 {
+        border-right: 3px solid rgb(173, 170, 170);
+    }
+    .box3, .box6, .box9 {
+        border-left: 3px solid rgb(173, 170, 170);
+    }
+    .box1, .box2, .box3, .box4, .box5, .box6 {
+        border-bottom: 3px solid rgb(173, 170, 170);
+    }
+    .play-board .box {
+        font-size: 120px;
+        padding-top: 10px;
+    }    
+    .play-board .details span {
+        font-size: 40px;
+    }
+    .play-board button {
+        font-size: 35px;
+    }
+    .play-board .homeButton {
+        margin-right: 10px;
+    }
+    .announcement {
+        left: 6%;
+        max-width: 820px;
+    }
+    .announcement header {
+        font-size: 55px;
+    }
+    .announcement button {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-device-width: 700px){
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .select-box {
+        position: static;
+    }
+    .select-box header {
+        flex:1;
+        font-size: 70px;
+        text-align: center;
+    }
+    .select-box .content {
+        flex:1;
+    }
+    .select-box .mode {
+        flex:1;
+    }
+    .select-box .title {
+        font-size: 55px;
+        margin: 50px 0px;
+        text-align: center;
+    }
+    .select-box button.btn {
+        font-size: 45px;
+    }
+    .focus {
+        font-size: 45px;
+    }
+    .play-board {
+        top: 8%;
+        left: 5%;
+        max-width: 820px;
+    }
+    .play-board .icon {
+        font-size: 70px;
+    }
+    .play-board .amount {
+        font-size: 45px;
+    }
+    .play-board section span {
+        height: 170px;
+        width: 170px;
+    }
+    .play-board .play-area {
+        margin: 60px 125px;
+    }
+    .box1, .box4, .box7 {
+        border-right: 3px solid rgb(173, 170, 170);
+    }
+    .box3, .box6, .box9 {
+        border-left: 3px solid rgb(173, 170, 170);
+    }
+    .box1, .box2, .box3, .box4, .box5, .box6 {
+        border-bottom: 3px solid rgb(173, 170, 170);
+    }
+    .play-board .box {
+        font-size: 120px;
+        padding-top: 10px;
+    }    
+    .play-board .details span {
+        font-size: 50px;
+    }
+    .play-board button {
+        font-size: 45px;
+    }
+    .play-board .homeButton {
+        margin-right: 10px;
+    }
+    .announcement {
+        left: 6%;
+        max-width: 820px;
+    }
+    .announcement header {
+        font-size: 55px;
+    }
+    .announcement button {
+        font-size: 45px;
+    }
+} */
